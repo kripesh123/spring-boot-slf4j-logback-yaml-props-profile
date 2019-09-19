@@ -6,9 +6,19 @@
     <link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
 </head>
 <body>
-    <h1>Spring SLF4j Logback example</h1>
-    <ul>
-        <li th:each="n : ${name}" th:text="${n}"></li>
+    <h1>Spring YAML and Properties File Configuration example</h1>
+    <h2 th:text="${global.email}"></h2>
+    <h3 th:text="${global.threadPool}"></h3>
+    <h4 th:text="${business.themes.defaultFolder}"></h4>
+    <ul th:each="m : ${business.menus}" >
+        <li th:text="${m.name}"></li>
+        <li th:text="${m.path}"></li>
+        <li th:text="${m.title}"></li>
+    </ul>
+
+    <ul th:each="s : ${business.servers}" >
+        <li th:text="${s.ip}"></li>
+        <li th:text="${s.path}"></li>
     </ul>
 </body>
 </html>
