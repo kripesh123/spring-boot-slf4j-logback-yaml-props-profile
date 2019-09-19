@@ -6,7 +6,7 @@
     <link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
 </head>
 <body>
-    <h1>Spring Profile YAML VS Properties File example</h1>
+    <h1>Spring Expose Rest API "/api/v1"</h1>
     <h2 th:text="${server.email}"></h2>
     <ul th:each="cu : ${server.cluster}" >
         <li th:text="${cu.ip}"></li>
