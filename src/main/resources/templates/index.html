@@ -6,19 +6,11 @@
     <link rel="stylesheet" th:href="@{/css/main.css}" href="../../css/main.css"/>
 </head>
 <body>
-    <h1>Spring YAML and Properties File Configuration example</h1>
-    <h2 th:text="${global.email}"></h2>
-    <h3 th:text="${global.threadPool}"></h3>
-    <h4 th:text="${business.themes.defaultFolder}"></h4>
-    <ul th:each="m : ${business.menus}" >
-        <li th:text="${m.name}"></li>
-        <li th:text="${m.path}"></li>
-        <li th:text="${m.title}"></li>
-    </ul>
-
-    <ul th:each="s : ${business.servers}" >
-        <li th:text="${s.ip}"></li>
-        <li th:text="${s.path}"></li>
+    <h1>Spring Profile YAML VS Properties File example</h1>
+    <h2 th:text="${server.email}"></h2>
+    <ul th:each="cu : ${server.cluster}" >
+        <li th:text="${cu.ip}"></li>
+        <li th:text="${cu.path}"></li>
     </ul>
 </body>
 </html>
