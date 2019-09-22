@@ -16,7 +16,7 @@ server:
 spring:
   profiles: dev
 server:
-  email: dev@mkyong.com
+  email: dev@kripesh.com
   cluster:
     - ip: 127.0.0.1
       path: /dev1
@@ -30,7 +30,7 @@ server:
 spring:
   profiles: prod
 server:
-  email: prod@mkyong.com
+  email: prod@kripesh.com
   cluster:
     - ip: 192.168.0.11
       path: /app1
